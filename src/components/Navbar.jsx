@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = ({ cartCount, onCartClick }) => {
   return (
-    <nav className="flex justify-between items-center bg-gray-800 text-white p-4 shadow-md">
+    <nav className="flex justify-between items-center bg-gray-800 text-white p-4 px-6 shadow-md fixed w-full top-0 z-10">
       <h1 className="text-xl font-bold">Fake Store</h1>
       <button
         onClick={onCartClick}

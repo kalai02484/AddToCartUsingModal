@@ -1,16 +1,66 @@
-# React + Vite
+# AddToCartUsingModal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple frontend demo that implements an "Add to Cart" flow using a modal dialog. Suitable as a learning example or small UI widget to integrate into a larger app.
 
-Currently, two official plugins are available:
+## Features
+- Product list with Add to Cart action
+- Modal that shows item details, quantity, and cart actions
+- Client-side cart state (add, update quantity, remove)
+- Accessible keyboard interactions and basic focus management
+- Lightweight, framework-agnostic examples (can be implemented in React, Vue, or vanilla JS)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
+- HTML, CSS, JavaScript (or)
+- React + hooks (recommended)
+- Optional: TypeScript, Vite/CRA, Tailwind / CSS modules
 
-## React Compiler
+## Prerequisites
+- Node.js >= 14 (if using the example app)
+- npm or yarn
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick start (React example)
+1. Install dependencies
+    npm install
+2. Start dev server
+    npm start
+3. Open http://localhost:3000
 
-## Expanding the ESLint configuration
+(or)
+- For vanilla JS example, open index.html in a browser.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Usage
+- Browse product list
+- Click "Add to Cart" to open modal
+- Adjust quantity inside modal
+- Confirm to add/update cart
+- View cart summary / proceed to checkout
+
+## Project structure (suggested)
+- src/
+  - components/
+     - ProductList.jsx
+     - ProductCard.jsx
+     - CartModal.jsx
+     - CartSummary.jsx
+  - hooks/
+     - useCart.js
+  - styles/
+  - index.jsx
+- public/
+  - index.html
+- README.md
+- package.json
+
+## Customization
+- Swap modal implementation for a11y-ready libraries (e.g., Reach UI, Radix)
+- Persist cart to localStorage or backend API
+- Add animations and improved responsive styles
+
+## Testing
+- Unit test components with Jest + React Testing Library
+- Add E2E tests with Playwright or Cypress for modal flows
+
+## Contributing
+- Fork repository, create feature branch, open a PR with a short description and tests if applicable.
+
+

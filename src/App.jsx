@@ -45,7 +45,7 @@ const App = () => {
         cartCount={cart.length}
         onCartClick={() => setIsModalOpen(true)}
       />
-      <div className="grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4 mt-16">
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -54,7 +54,14 @@ const App = () => {
           />
         ))}
       </div>
-      
+
+      {isModalOpen && (
+        <CartModal
+          cart={cart}
+          closeModal={() => setIsModalOpen(false)}
+          removeFromCart={removeFromCart}
+        />
+      )}
     </div>
   );
 };
